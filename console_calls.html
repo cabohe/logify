@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="logify.js"></script>
+</head>
+<body>
+    <script>
+        //  EXPAND THEMES
+        /*
+        log.themes.new = {
+            errorStyles : "color: blue;font-size:60px;",
+        }
+        log.options.theme = "new";
+        */
+
+        log.options.showLog = true;
+        
+        log.error("Error message");
+        log.print("Normal message");
+        log.featured("Big message");
+        log.info("Height 25px");
+        props = {
+            height : 30,
+            width : 20
+        };
+        log.info(props);
+        log.br();
+        log.warning("Aviso");
+        log.data("counter" , "12");
+        cart = {
+            Objects : 3,
+            Import : 7
+        };
+        log.data("Cart" , cart);
+        log.log(cart);
+        log.log("hola");
+        log.log(24);
+
+        function pepe(){
+            log.print("PUNK IS DEAD");
+        }
+        pepe();
+    </script>
+</body>
+</html>
