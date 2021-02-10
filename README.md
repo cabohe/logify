@@ -6,18 +6,18 @@ Stylish js console log, with personalizable styles.
 Download and include 😄
 
 ## Available functions
-print
+###print
 
-featured
+###featured
 
-error
+###error
 
-warning
+###warning
 
-info
+###info
 
-log
+###log
 
-data
+###data
 
-br
+###br
