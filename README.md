@@ -6,18 +6,30 @@ Stylish js console log, with personalizable styles.
 Download and include 😄
 
 ## Available functions
-###print
 
-###featured
+### print(msg)
+Shows message in plain format.
 
-###error
+### featured(msg)
+Shows message in plain format, bigger size or prominent style.
 
-###warning
+### error(msg)
+Shows beatifull crash message.
 
-###info
+### warning(msg)
+Shows beatifull advice or warning message.
 
-###log
+### info(msg)
+Shows beatifull information.
 
-###data
+### log(msg)
+The classic and direct `console.log`.
 
-###br
+### data(key,value)
+Shows name (key) at left and autoformated var to the right (value).
+
+### br()
+Show a separation to your logs.
+
+### image(url)
+Show an image in your console.
