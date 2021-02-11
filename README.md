@@ -11,7 +11,7 @@ Create an instance with:
 
 `const miLog = new Logify();`
 
-You can modify the theme or the logging behavior passing an object as param:
+You can modify the theme or the logging behavior passing an object as param on the initialization:
 
 ```
 let prefs = {

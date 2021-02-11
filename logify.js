@@ -87,6 +87,13 @@ class Logify{
             image.src = url;
         }
     };
+    // Sets & Gets
+    set theme(newTheme){
+        this.options.theme = newTheme;
+    }
+    set showLog(newLogLevel){
+        this.options.showLog = newLogLevel;
+    }
     // Tools
     depthOf(object) {
         var level = 1;
