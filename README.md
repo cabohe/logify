@@ -3,9 +3,45 @@ Stylish js console log, with personalizable styles.
 
 ## Installation
 
-Download and include 😄
+**Vanilla JS** - Download and include 😄
 
-## Available functions
+## Initialize
+
+Create an instance with:
+
+`const miLog = new Logify();`
+
+You can modify the theme or the logging behavior passing an object as param:
+
+```
+let prefs = {
+            theme : "glowTheme",
+            showLog : "all"
+        };
+const miLog = new Logify(prefs,multipleThemes);
+```
+Available themes on basic package:
+ - classic
+ - light
+ - dark
+
+Available showLog params:
+ - all (Output all messages)
+ - errors (Output only error messages)
+ - problems (Output only error and warning messages)
+ - none - Nothing is output in console.
+
+## Usage
+
+When the instance is initialized (as *miLog* in this example) you can start making calls in this way:
+
+```
+miLog.log("One monkey");
+miLog.print("Hi Monkey!");
+miLog.featured("Hi Big Monkey!");
+```
+
+## Available calls
 
 ### print(msg)
 Shows message in plain format.
