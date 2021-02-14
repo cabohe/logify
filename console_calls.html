@@ -3,39 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Logify</title>
     <script src="logify.js"></script>
 </head>
 <body>
     <script>
-        
-        let multipleThemes = {
-            glowTheme : {
-                printStyle : "color:#333;padding:5px;font-size:12px;text-shadow:0px 0px 5px red;",
-                featStyle : "color:#333;padding:5px;font-size:18px;text-shadow:0px 0px 5px red;",
-                errorStyle : "color:#fff;box-shadow:0px 0px 5px red;padding:5px 5px 5px 14px;font-weight:bold;border-radius:4px;font-size:12px;background-color:#A5302B;background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+PHBhdGggZD0iTTQ0LjQgNy42QzM0LjMtMi41IDE3LjgtMi41IDcuNiA3LjZzLTEwLjEgMjYuNiAwIDM2LjggMjYuNiAxMC4xIDM2LjggMGMxMC4xLTEwLjEgMTAuMS0yNi42IDAtMzYuOHptLTguMSAyOC42Yy0uOC44LTIgLjgtMi44IDBsLTcuNC03LjQtNy44IDcuOGMtLjguOC0yIC44LTIuOCAwcy0uOC0yIDAtMi44bDcuOC03LjgtNy40LTcuNGMtLjgtLjgtLjgtMiAwLTIuOC44LS44IDItLjggMi44IDBsNy40IDcuNCA3LjEtNy4xYy44LS44IDItLjggMi44IDBzLjggMiAwIDIuOEwyOC45IDI2bDcuNCA3LjRjLjguOC44IDIgMCAyLjh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);background-position:3px 50%;background-repeat:no-repeat;background-size:15px;",
-                warningStyle : "color:#fff;box-shadow:0px 0px 5px yellow;background:orange;padding:5px 5px 5px 14px;font-weight:bold;border-radius:4px;font-size:12px;background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNTA3LjUgNDI2LjFMMjgyLjkgNTMuNWMtNS43LTkuNC0xNS45LTE1LjItMjYuOS0xNS4yLTExIDAtMjEuMiA1LjgtMjYuOSAxNS4yTDQuNSA0MjYuMWMtNS44IDkuNy02IDIxLjgtLjUgMzEuNiA1LjYgOS45IDE2IDE1LjkgMjcuMyAxNS45aDQ0OS4zYzExLjMgMCAyMS44LTYuMSAyNy4zLTE1LjkgNS42LTkuOSA1LjQtMjEuOS0uNC0zMS42ek0yNTYuMiAxNjcuMmMxMi45IDAgMjMuOCA3LjMgMjMuOCAyMC4yIDAgMzkuNC00LjYgOTUuOS00LjYgMTM1LjMgMCAxMC4zLTExLjIgMTQuNi0xOS4yIDE0LjYtMTAuNiAwLTE5LjUtNC4zLTE5LjUtMTQuNiAwLTM5LjQtNC42LTk1LjktNC42LTEzNS4zLS4xLTEyLjkgMTAuNS0yMC4yIDI0LjEtMjAuMnptLjMgMjQzLjhjLTE0LjYgMC0yNS41LTExLjktMjUuNS0yNS41IDAtMTMuOSAxMC45LTI1LjUgMjUuNS0yNS41IDEzLjYgMCAyNS4xIDExLjYgMjUuMSAyNS41IDAgMTMuNi0xMS41IDI1LjUtMjUuMSAyNS41eiIvPjwvc3ZnPg==);background-position:3px 50%;background-repeat:no-repeat;background-size:15px;",
-                infoStyle : "color:#fff;box-shadow:0px 0px 5px cyan;background-color:#2682CB;padding:5px 5px 5px 14px;font-weight:bold;border-radius:4px;font-size:12px;background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMy42IDIzLjYiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMS44IDBDNS4zIDAgMCA1LjMgMCAxMS44czUuMyAxMS44IDExLjggMTEuOCAxMS44LTUuMyAxMS44LTExLjhTMTguMyAwIDExLjggMHptMi41IDE4LjNjLS42LjItMS4xLjQtMS41LjUtLjQuMS0uOC4yLTEuMy4yLS43IDAtMS4zLS4yLTEuNy0uNXMtLjYtLjgtLjYtMS40di0uN2MwLS4yLjEtLjUuMS0uOGwuOC0yLjdjLjEtLjMuMS0uNS4yLS43IDAtLjIuMS0uNC4xLS42IDAtLjMtLjEtLjYtLjItLjctLjEtLjEtLjQtLjItLjgtLjItLjIgMC0uNCAwLS42LjEtLjIuMS0uNC4xLS41LjJsLjItLjhjLjUtLjIgMS0uNCAxLjQtLjUuNS0uMS45LS4yIDEuMy0uMi43IDAgMS4zLjIgMS43LjUuNC40LjYuOC42IDEuNHYuNmMwIC4zLS4xLjYtLjIuOGwtLjggMi43Yy0uMS4yLS4xLjUtLjIuNyAwIC4zLS4xLjUtLjEuNiAwIC40LjEuNi4yLjcuMi4xLjQuMi44LjIuMiAwIC40IDAgLjYtLjEuMi0uMS40LS4xLjUtLjJ2Ljl6bS0uMi0xMC45Yy0uNC4zLS44LjUtMS4zLjVzLS45LS4yLTEuMy0uNS0uNS0uNy0uNS0xLjIuMi0uOS41LTEuMmMuNC0uMy44LS41IDEuMy0uNXMuOS4yIDEuMy41LjUuNy41IDEuMmMuMS41LS4xLjktLjUgMS4yeiIvPjwvc3ZnPg==);background-position:3px 50%;background-repeat:no-repeat;background-size:15px;",
-                dataStyle : "color:#2682CB;font-weight:bold;font-size:12px;",
-                breakStyle : "line-height:2px;background:#666;"
-            },
-            punk : {
-                
-                printStyle : "color:purple;padding:5px;font-size:12px;text-shadow:0px 0px 5px red;",
-                featStyle : "color:purple;padding:5px;font-size:18px;text-shadow:0px 0px 5px red;",
-                errorStyle : "color:#fff;padding:5px 5px 5px 14px;font-weight:bold;border-radius:4px;font-size:12px;background-color:#A5302B;background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+PHBhdGggZD0iTTQ0LjQgNy42QzM0LjMtMi41IDE3LjgtMi41IDcuNiA3LjZzLTEwLjEgMjYuNiAwIDM2LjggMjYuNiAxMC4xIDM2LjggMGMxMC4xLTEwLjEgMTAuMS0yNi42IDAtMzYuOHptLTguMSAyOC42Yy0uOC44LTIgLjgtMi44IDBsLTcuNC03LjQtNy44IDcuOGMtLjguOC0yIC44LTIuOCAwcy0uOC0yIDAtMi44bDcuOC03LjgtNy40LTcuNGMtLjgtLjgtLjgtMiAwLTIuOC44LS44IDItLjggMi44IDBsNy40IDcuNCA3LjEtNy4xYy44LS44IDItLjggMi44IDBzLjggMiAwIDIuOEwyOC45IDI2bDcuNCA3LjRjLjguOC44IDIgMCAyLjh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);background-position:3px 50%;background-repeat:no-repeat;background-size:15px;",
-                warningStyle : "color:#fff;background:orange;padding:5px 5px 5px 14px;font-weight:bold;border-radius:4px;font-size:12px;background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNTA3LjUgNDI2LjFMMjgyLjkgNTMuNWMtNS43LTkuNC0xNS45LTE1LjItMjYuOS0xNS4yLTExIDAtMjEuMiA1LjgtMjYuOSAxNS4yTDQuNSA0MjYuMWMtNS44IDkuNy02IDIxLjgtLjUgMzEuNiA1LjYgOS45IDE2IDE1LjkgMjcuMyAxNS45aDQ0OS4zYzExLjMgMCAyMS44LTYuMSAyNy4zLTE1LjkgNS42LTkuOSA1LjQtMjEuOS0uNC0zMS42ek0yNTYuMiAxNjcuMmMxMi45IDAgMjMuOCA3LjMgMjMuOCAyMC4yIDAgMzkuNC00LjYgOTUuOS00LjYgMTM1LjMgMCAxMC4zLTExLjIgMTQuNi0xOS4yIDE0LjYtMTAuNiAwLTE5LjUtNC4zLTE5LjUtMTQuNiAwLTM5LjQtNC42LTk1LjktNC42LTEzNS4zLS4xLTEyLjkgMTAuNS0yMC4yIDI0LjEtMjAuMnptLjMgMjQzLjhjLTE0LjYgMC0yNS41LTExLjktMjUuNS0yNS41IDAtMTMuOSAxMC45LTI1LjUgMjUuNS0yNS41IDEzLjYgMCAyNS4xIDExLjYgMjUuMSAyNS41IDAgMTMuNi0xMS41IDI1LjUtMjUuMSAyNS41eiIvPjwvc3ZnPg==);background-position:3px 50%;background-repeat:no-repeat;background-size:15px;",
-                infoStyle : "color:#fff;background-color:#2682CB;padding:5px 5px 5px 14px;font-weight:bold;border-radius:4px;font-size:12px;background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMy42IDIzLjYiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMS44IDBDNS4zIDAgMCA1LjMgMCAxMS44czUuMyAxMS44IDExLjggMTEuOCAxMS44LTUuMyAxMS44LTExLjhTMTguMyAwIDExLjggMHptMi41IDE4LjNjLS42LjItMS4xLjQtMS41LjUtLjQuMS0uOC4yLTEuMy4yLS43IDAtMS4zLS4yLTEuNy0uNXMtLjYtLjgtLjYtMS40di0uN2MwLS4yLjEtLjUuMS0uOGwuOC0yLjdjLjEtLjMuMS0uNS4yLS43IDAtLjIuMS0uNC4xLS42IDAtLjMtLjEtLjYtLjItLjctLjEtLjEtLjQtLjItLjgtLjItLjIgMC0uNCAwLS42LjEtLjIuMS0uNC4xLS41LjJsLjItLjhjLjUtLjIgMS0uNCAxLjQtLjUuNS0uMS45LS4yIDEuMy0uMi43IDAgMS4zLjIgMS43LjUuNC40LjYuOC42IDEuNHYuNmMwIC4zLS4xLjYtLjIuOGwtLjggMi43Yy0uMS4yLS4xLjUtLjIuNyAwIC4zLS4xLjUtLjEuNiAwIC40LjEuNi4yLjcuMi4xLjQuMi44LjIuMiAwIC40IDAgLjYtLjEuMi0uMS40LS4xLjUtLjJ2Ljl6bS0uMi0xMC45Yy0uNC4zLS44LjUtMS4zLjVzLS45LS4yLTEuMy0uNS0uNS0uNy0uNS0xLjIuMi0uOS41LTEuMmMuNC0uMy44LS41IDEuMy0uNXMuOS4yIDEuMy41LjUuNy41IDEuMmMuMS41LS4xLjktLjUgMS4yeiIvPjwvc3ZnPg==);background-position:3px 50%;background-repeat:no-repeat;background-size:15px;",
-                dataStyle : "color:#2682CB;font-weight:bold;font-size:12px;",
-                breakStyle : "line-height:2px;background:#666;"
 
+        let logifyTheme = {
+            simple : {
+                printStyle : "font-family: 'Times New Roman', serif;font-size:14px;",
+                featStyle : "font-family: 'Times New Roman', serif;font-size:18px;",
+                infoStyle : "font-family: 'Times New Roman', serif;font-size:16px;color:blue;",
+                warningStyle : "font-family: 'Times New Roman', serif;font-size:16px;color:orange;",
+                errorStyle : "font-family: 'Times New Roman', serif;font-size:16px;color:red;",
+                dataStyle : "font-family: 'Times New Roman', serif;font-size:14px;",
+                breakStyle : "line-height:0;padding:1px;background:#666;"
             }
         };
+
         let prefs = {
-            theme : "glowTheme",
+            theme : "simple",
             showLog : "all"
         };
-        const miLog = new Logify(prefs,multipleThemes);
+        // logifyTheme is a declared var in external Theme JS
+        const miLog = new Logify(prefs,logifyTheme);
         miLog.log("One monkey");
         miLog.print("Hi Monkey!");
         miLog.featured("Hi Big Monkey!");
@@ -54,8 +45,8 @@
         miLog.warning("One monkey is running away");
         miLog.error("One monkey has escaped");
 
-        miLog.theme = "light";
-        miLog.showLog = "problems";
+        // miLog.theme = "light";
+        // miLog.showLog = "problems";
         miLog.info("For your information: Here are " + numberOfMonkeys + " monkeys");
         miLog.warning("One monkey is running away");
         miLog.error("One monkey has escaped");
