@@ -125,5 +125,5 @@ I hope you enjoy this little script to make your logging more productive and fun
 
 If you find something to make it better, contact me at cabohe@gmail.com
 
-[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png">](https://www.buymeacoffee.com/cabohe)
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" width="240">](https://www.buymeacoffee.com/cabohe)
 
