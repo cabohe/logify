@@ -7,6 +7,8 @@ Some cool samples:
 ![alt text](http://cabohe.com/logify/assets/themes/oldschool.png)
 ![alt text](http://cabohe.com/logify/assets/themes/light.png)
 ![alt text](http://cabohe.com/logify/assets/themes/dark.png)
+[![](http://cabohe.com/logify/assets/themes/classic.png)](#)
+[![](http://cabohe.com/logify/assets/themes/oldschool.png)](#)
 
 ## Installation
 
