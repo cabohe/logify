@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logify</title>
-    <script src="logify.js"></script>
+    <script src="../logify-min.js"></script>
 </head>
 <body>
     <script>
-
+        // Create your theme styles
         let logifyTheme = {
             simple : {
                 printStyle : "font-family: 'Times New Roman', serif;font-size:14px;",
@@ -20,13 +20,14 @@
                 breakStyle : "line-height:0;padding:1px;background:#666;"
             }
         };
-
+        // Set your Theme
         let prefs = {
-            theme : "simple",
-            showLog : "all"
+            theme : "simple"
         };
-        // logifyTheme is a declared var in external Theme JS
+        // Load Theme object to constructor
         const miLog = new Logify(prefs,logifyTheme);
+
+        // Start Logging
         miLog.log("One monkey");
         miLog.print("Hi Monkey!");
         miLog.featured("Hi Big Monkey!");
@@ -37,20 +38,11 @@
             color: "brown"
         }
         miLog.data("Monkey info",monkeyInfo);
-
-        
         miLog.br();
         let numberOfMonkeys = 2;
         miLog.info("For your information: Here are " + numberOfMonkeys + " monkeys");
         miLog.warning("One monkey is running away");
         miLog.error("One monkey has escaped");
-
-        // miLog.theme = "light";
-        // miLog.showLog = "problems";
-        miLog.info("For your information: Here are " + numberOfMonkeys + " monkeys");
-        miLog.warning("One monkey is running away");
-        miLog.error("One monkey has escaped");
-
         miLog.image("http://icons.iconseeker.com/png/fullsize/animals-vista/monkey-4.png");
 
 

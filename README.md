@@ -1,9 +1,18 @@
 # logify
 Stylish js console log, with personalizable styles.
 
+Some cool samples:
+
+<img src="http://cabohe.com/logify/assets/themes/classic.png">
+<img src="http://cabohe.com/logify/assets/themes/oldschool.png">
+<img src="http://cabohe.com/logify/assets/themes/light.png">
+<img src="http://cabohe.com/logify/assets/themes/dark.png">
+
 ## Installation
 
 **Vanilla JS** - Download and include 😄
+
+You have code examples in *demos* folder
 
 ## Initialize
 
@@ -123,7 +132,7 @@ const miLog = new Logify(prefs,logifyTheme);
 ## Enjoy, share and contact 
 I hope you enjoy this little script to make your logging more productive and fun.
 
-If you find something to make it better, contact me at cabohe@gmail.com
+If you find something to make it better or want to share your Logify theme contact me at cabohe@gmail.com
 
 [<img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" width="240">](https://www.buymeacoffee.com/cabohe)
 

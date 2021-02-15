@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logify</title>
+    <script src="../logify-min.js"></script>
+    <!-- Include the theme file -->
+    <script src="../themes/glow.js"></script>
+</head>
+<body>
+    <script>
+
+        let prefs = {
+            theme : "glow"
+        };
+        // Load preferences with theme definition
+        // logifyTheme is a declared var in external Theme JS
+        const miLog = new Logify(prefs , logifyTheme);
+
+        // Start Logging
+        miLog.log("One monkey");
+        miLog.print("Hi Monkey!");
+        miLog.featured("Hi Big Monkey!");
+        let monkeyInfo = {
+            years : 2,
+            name : "Albert",
+            profession: "Astronaut",
+            color: "brown"
+        }
+        miLog.data("Monkey info",monkeyInfo);
+
+        
+        miLog.br();
+        let numberOfMonkeys = 2;
+        miLog.info("For your information: Here are " + numberOfMonkeys + " monkeys");
+        miLog.warning("One monkey is running away");
+        miLog.error("One monkey has escaped");
+
+        // miLog.theme = "light";
+        // miLog.showLog = "problems";
+        miLog.info("For your information: Here are " + numberOfMonkeys + " monkeys");
+        miLog.warning("One monkey is running away");
+        miLog.error("One monkey has escaped");
+
+        miLog.image("http://icons.iconseeker.com/png/fullsize/animals-vista/monkey-4.png");
+
+
+    </script>
+</body>
+</html>
