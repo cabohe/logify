@@ -3,10 +3,10 @@ Stylish js console log, with personalizable styles.
 
 Some cool samples:
 
-<img src="http://cabohe.com/logify/assets/themes/classic.png">
-<img src="http://cabohe.com/logify/assets/themes/oldschool.png">
-<img src="http://cabohe.com/logify/assets/themes/light.png">
-<img src="http://cabohe.com/logify/assets/themes/dark.png">
+![alt text](http://cabohe.com/logify/assets/themes/classic.png)
+![alt text](http://cabohe.com/logify/assets/themes/oldschool.png)
+![alt text](http://cabohe.com/logify/assets/themes/light.png)
+![alt text](http://cabohe.com/logify/assets/themes/dark.png)
 
 ## Installation
 
