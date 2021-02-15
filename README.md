@@ -1,13 +1,13 @@
 # logify
 Stylish js console log, with personalizable styles.
 
-Some cool samples:
+See some cool samples:
 
 <p float="left">
-  <img src="http://cabohe.com/logify/assets/themes/classic.png" width="250" />
-  <img src="http://cabohe.com/logify/assets/themes/oldschool.png" width="250" /> 
-  <img src="http://cabohe.com/logify/assets/themes/light.png" width="250" />
-  <img src="http://cabohe.com/logify/assets/themes/dark.png" width="250" />
+  <img src="http://cabohe.com/logify/assets/themes/classic.png" width="320" />
+  <img src="http://cabohe.com/logify/assets/themes/oldschool.png" width="320" /> 
+  <img src="http://cabohe.com/logify/assets/themes/light.png" width="320" />
+  <img src="http://cabohe.com/logify/assets/themes/dark.png" width="320" />
 </p>
 
 ## Installation
