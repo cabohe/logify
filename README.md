@@ -3,15 +3,11 @@ Stylish js console log, with personalizable styles.
 
 Some cool samples:
 
-[![](http://cabohe.com/logify/assets/themes/classic.png)](https://github.com/cabohe/logify)
-[![](http://cabohe.com/logify/assets/themes/oldschool.png)](https://github.com/cabohe/logify)
-[![](http://cabohe.com/logify/assets/themes/light.png)](https://github.com/cabohe/logify)
-[![](http://cabohe.com/logify/assets/themes/dark.png)](https://github.com/cabohe/logify)
 <p float="left">
-  <img src="http://cabohe.com/logify/assets/themes/classic.png" width="100" />
-  <img src="http://cabohe.com/logify/assets/themes/oldschool.png" width="100" /> 
-  <img src="http://cabohe.com/logify/assets/themes/light.png" width="100" />
-  <img src="http://cabohe.com/logify/assets/themes/dark.png" width="100" />
+  <img src="http://cabohe.com/logify/assets/themes/classic.png" width="250" />
+  <img src="http://cabohe.com/logify/assets/themes/oldschool.png" width="250" /> 
+  <img src="http://cabohe.com/logify/assets/themes/light.png" width="250" />
+  <img src="http://cabohe.com/logify/assets/themes/dark.png" width="250" />
 </p>
 
 ## Installation
