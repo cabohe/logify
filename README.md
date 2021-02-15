@@ -1,5 +1,5 @@
 # logify
-Stylish js console log, with personalizable styles.
+Stylish js console log, with personalizable styles, logging levels and simple image display.
 
 See some cool samples:
 
