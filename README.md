@@ -26,10 +26,10 @@ You can modify the theme or the logging behavior passing an object as param on t
 
 ```
 let prefs = {
-            theme : "glowTheme",
+            theme : "dark",
             showLog : "all"
         };
-const miLog = new Logify(prefs,multipleThemes);
+const miLog = new Logify(prefs);
 ```
 Available themes on basic package:
  - classic

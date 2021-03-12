@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logify</title>
     <script src="../logify-min.js"></script>
 </head>
+
 <body>
     <script>
         // Create your theme styles
         let logifyTheme = {
-            simple : {
-                printStyle : "font-family: 'Times New Roman', serif;font-size:14px;",
-                featStyle : "font-family: 'Times New Roman', serif;font-size:18px;",
-                infoStyle : "font-family: 'Times New Roman', serif;font-size:16px;color:blue;",
-                warningStyle : "font-family: 'Times New Roman', serif;font-size:16px;color:orange;",
-                errorStyle : "font-family: 'Times New Roman', serif;font-size:16px;color:red;",
-                dataStyle : "font-family: 'Times New Roman', serif;font-size:14px;",
-                breakStyle : "line-height:0;padding:1px;background:#666;"
+            simple: {
+                printStyle: "font-family: 'Times New Roman', serif;font-size:14px;",
+                featStyle: "font-family: 'Times New Roman', serif;font-size:18px;",
+                infoStyle: "font-family: 'Times New Roman', serif;font-size:16px;color:blue;",
+                warningStyle: "font-family: 'Times New Roman', serif;font-size:16px;color:orange;",
+                errorStyle: "font-family: 'Times New Roman', serif;font-size:16px;color:red;",
+                dataStyle: "font-family: 'Times New Roman', serif;font-size:14px;",
+                breakStyle: "line-height:0;padding:1px;background:#666;"
             }
         };
         // Set your Theme
         let prefs = {
-            theme : "simple"
+            theme: "simple"
         };
         // Load Theme object to constructor
-        const miLog = new Logify(prefs,logifyTheme);
+        const miLog = new Logify(prefs, logifyTheme);
 
         // Start Logging
         miLog.log("One monkey");
         miLog.print("Hi Monkey!");
         miLog.featured("Hi Big Monkey!");
         let monkeyInfo = {
-            years : 2,
-            name : "Albert",
+            years: 2,
+            name: "Albert",
             profession: "Astronaut",
             color: "brown"
         }
-        miLog.data("Monkey info",monkeyInfo);
+        miLog.data("Monkey info", monkeyInfo);
         miLog.br();
         let numberOfMonkeys = 2;
         miLog.info("For your information: Here are " + numberOfMonkeys + " monkeys");
@@ -48,4 +50,5 @@
 
     </script>
 </body>
+
 </html>
